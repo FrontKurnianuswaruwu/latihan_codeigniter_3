@@ -23,7 +23,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-					<a href="<?= base_url() ?>Karyawan/tambahkaryawan" class="btn btn-primary">Tambah</a>
+                    <a href="<?= base_url() ?>Karyawan/tambahkaryawan" class="btn btn-primary">Tambah</a>
                     <?php if($this->session->userdata('successmsg')):?>
                     <p class="text-danger"><?= $this->session->userdata('successmsg')?></p>
                     <?php $this->session->unset_userdata('successmsg')?>
@@ -37,23 +37,25 @@
                                 <th scope="col">Nama Karyawan</th>
                                 <th scope="col">Alamat</th>
                                 <th scope="col">No Telepon</th>
-								<th>Aksi</th>
+                                <th>Aksi</th>
                             </tr>
                         </thead>
-							<?php foreach ($karyawan as $k):  ?>
-							<tr>
-								<td><?=$k['idkaryawan']?></td>
-								<td><?=$k['namakaryawan']?></td>
-								<td><?=$k['alamat']?></td>
-								<td><?=$k['nowa']?></td>
-								<td>
-								<a href="<?= base_url()?>Karyawan/hapus/<?= $k['idkaryawan']?>" class=" btn btn-sm btn-dark"><i class="fa fa-trash"></i></a>
-								<a href="<?= base_url()?>Karyawan/edit/<?= $k['idkaryawan']?>" class=" btn btn-sm btn-success"><i class="fa fa-edit"></i></a>
-							</td>
-							</tr>
-							<?php endforeach;?>
+                        <?php foreach ($karyawan as $k):  ?>
+                        <tr>
+                            <td><?=$k['idkaryawan']?></td>
+                            <td><?=$k['namakaryawan']?></td>
+                            <td><?=$k['alamat']?></td>
+                            <td><?=$k['nowa']?></td>
+                            <td>
+                                <a href="<?= base_url()?>Karyawan/hapus/<?= $k['idkaryawan']?>"
+                                    class=" btn btn-sm btn-dark"><i class="fa fa-trash"></i></a>
+                                <a href="<?= base_url()?>Karyawan/edit/<?= $k['idkaryawan']?>"
+                                    class=" btn btn-sm btn-success"><i class="fa fa-edit"></i></a>
+                            </td>
+                        </tr>
+                        <?php endforeach;?>
                         <tbody>
-                          
+
                         </tbody>
                     </table>
                 </div>
