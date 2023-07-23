@@ -65,7 +65,5 @@ class Karyawan extends CI_Controller {
 		$this->session->set_userdata('successmsg','data berhasil di ubah');
 		redirect('Karyawan');
 	}
-	
-	
-	
+		
 }
