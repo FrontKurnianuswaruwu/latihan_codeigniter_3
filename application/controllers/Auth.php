@@ -62,6 +62,6 @@ class Auth extends CI_Controller {
 		$this->session->set_userdata('successmsg','<div class="alert alert-success " role="alert">
 		Berhasil Log out!
 		</div>');
-		redirect('User/login/');
+		redirect('Auth/login/');
 	}
 }
