@@ -20,7 +20,7 @@ class Auth extends CI_Controller {
 			if($muser){
 				
 				//Cek apakah password yang di input sama dengan yang sudah terdaftar
-				if($muser['password'] == $password){
+				if(strtolower($muser['password']) == strtolower($password)){
 
 					$simpan = [
 						'userid' => $muse['userid'],
