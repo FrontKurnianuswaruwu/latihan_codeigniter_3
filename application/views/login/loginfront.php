@@ -38,10 +38,9 @@
                 <p class="text-success"><?= $this->session->userdata('successmsg')?></p>
                 <?php $this->session->unset_userdata('successmsg')?>
                 <?php endif; ?>
-                <form action="<?= base_url() ?>User/login" method="post">
+                <form action="<?= base_url() ?>Auth/post_login" method="post">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" value="<?= set_value('userid');?>" id="userid"
-                            name="userid" placeholder="ID">
+                        <input type="text" class="form-control" id="userid" name="userid" placeholder="ID" required>
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <i class="fas fa-id-card"></i>
@@ -49,10 +48,10 @@
                         </div>
 
                     </div>
-                    <p></p><?= form_error('userid');?>
+
                     <div class="input-group mb-3">
-                        <input type="password" class="form-control" value="<?= set_value('password');?>" id="password"
-                            name="password" placeholder="Password">
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Password"
+                            required>
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-lock"></span>
@@ -60,7 +59,7 @@
                         </div>
 
                     </div>
-                    <?= form_error('password');?>
+
                     <div class="row">
                         <!-- /.col -->
                         <div class="col-4 mx-auto">
